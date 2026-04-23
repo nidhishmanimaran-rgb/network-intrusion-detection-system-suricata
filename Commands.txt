@@ -1,0 +1,19 @@
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install suricata -y
+
+suricata --version
+
+ip a
+
+sudo nano /etc/suricata/rules/local.rules 
+
+sudo nano /etc/suricata/suricata.yaml
+
+sudo suricata -T -c /etc/suricata/suricata.yaml
+
+sudo suricata -c /etc/suricata/suricata.yaml -i eth0
+
+sudo tail -f /var/log/suricata/fast.log
+
+ping google.com
